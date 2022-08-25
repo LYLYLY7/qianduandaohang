@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>前航-前端导航网站</title>
+    <style type="text/css">
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="globalHeader">
+        <form class="searchForm" method="get" action="https://cn.bing.com/search">
+            <input name="q" type="text">
+            <button type="submit">搜索</button>
+        </form>
+    </header>
+    <main class="globalMain">
+        <ul class="siteList">
+            <li>
+                <div class="logo">
+                    <a href="https://www.acfun.cn">
+                        <img src="./images/acfun.png" alt="acfun logo" width="80px">
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="logo">
+                    <a href="https://www.bilibili.com">
+                        <img src="./images/bilbili.jpg" alt="bilbili logo" width="80px">
+                    </a>
+
+                </div>
+            </li>
+            <li>
+                <div class="logo">
+                    <a href="https://www.google.com">
+                        <img src="./images/google.png" alt="google logo" width="80px">
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="icon-wrapper">
+                    <svg class="icon">
+                        <use xlink:href="#icon-add"></use>
+                    </svg>
+                </div>
+            </li>
+        </ul>
+    </main>
+
+    <script src="//at.alicdn.com/t/c/font_3601945_u8c5851g63j.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

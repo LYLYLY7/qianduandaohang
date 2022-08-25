@@ -1,0 +1,85 @@
+/* css reset */
+* {
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+
+/* style */
+body {
+  background: #eee;
+}
+.globalHeader {
+  margin: 15px 30px;
+}
+.globalHeader .searchForm {
+  display: flex;
+  justify-content: space-between;
+}
+.globalHeader .searchForm > input {
+  width: 100%;
+  /* 此时搜索在按钮内按列排列 */
+  margin-right: 30px;
+  height: 40px;
+  padding-left: 10px;
+  /* border:none   用border-radius时先用前面语句覆盖一下*/
+  border: #ddd;
+  border-radius: 4px;
+}
+.globalHeader .searchForm > button {
+  white-space: nowrap;
+  /* 可取消上面注释问题 */
+  padding: 0 14px;
+  /* border:none   用border-radius时先用前面语句覆盖一下*/
+  border: #ddd;
+  border-radius: 4px;
+  background: #8f369d;
+  color: #eee;
+}
+
+.globalMain .siteList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.globalMain .siteList .logo {
+  width: 80px;
+  height: 80px;
+  margin: 20px 20px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+.globalMain .siteList .logo > a > img {
+  border-radius: 100%;
+  /* 图片以圆形显示 */
+  max-width: 100%;
+  max-height: 100%;
+}
+.globalMain .siteList .icon-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: 20px 20px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+.globalMain .siteList .icon {
+  width: 80px;
+  height: 80px;
+  margin: 20px 20px;
+}
