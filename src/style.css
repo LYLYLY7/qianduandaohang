@@ -18,6 +18,7 @@ ol {
 /* style */
 body {
   background: #eee;
+  /* body会将背景色自动扩展到整个网页 */
 }
 .globalHeader {
   margin: 15px 30px;
@@ -29,57 +30,88 @@ body {
 .globalHeader .searchForm > input {
   width: 100%;
   /* 此时搜索在按钮内按列排列 */
-  margin-right: 30px;
-  height: 40px;
+  margin: right 30px;
   padding-left: 10px;
+  height: 40px;
+  /* border: none; */
   /* border:none   用border-radius时先用前面语句覆盖一下*/
   border: #ddd;
   border-radius: 4px;
 }
 .globalHeader .searchForm > button {
   white-space: nowrap;
-  /* 可取消上面注释问题 */
-  padding: 0 14px;
-  /* border:none   用border-radius时先用前面语句覆盖一下*/
+  /* 解决搜索两字按列排列 */
+  padding: 0px 14px;
+  border: none;
   border: #ddd;
   border-radius: 4px;
-  background: #8f369d;
+  background: #8f169d;
   color: #eee;
 }
-
+.globalMain {
+  margin: 15px 30px;
+}
 .globalMain .siteList {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  /* 三个图标并排，wrap换行 */
 }
-.globalMain .siteList .logo {
-  width: 80px;
-  height: 80px;
-  margin: 20px 20px;
+.globalMain .siteList .site {
+  width: 150px;
+  height: 150px;
+  margin: 20px 10px;
   background: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 100%;
+  flex-direction: column;
+  /* 用border-radius之前 要重置border 
+  border:none*/
+  border-radius: 10px;
+  flex-wrap: wrap;
 }
-.globalMain .siteList .logo > a > img {
-  border-radius: 100%;
-  /* 图片以圆形显示 */
+.globalMain .siteList > li > a {
+  text-decoration: none;
+}
+/* `>` 此符号只能指示紧邻的孩子元素，
+不能直接.siteList > a
+*/
+
+.globalMain .siteList .site .logo {
+  width: 80px;
+  height: 80px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 75px;
+}
+.globalMain .siteList .site .link {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+img {
   max-width: 100%;
   max-height: 100%;
 }
-.globalMain .siteList .icon-wrapper {
-  width: 80px;
-  height: 80px;
-  margin: 20px 20px;
+.globalMain .siteList .addButton {
+  width: 150px;
+  height: 150px;
+  margin: 20px 10px;
   background: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 100%;
+  flex-direction: column;
+  border-radius: 10px;
 }
-.globalMain .siteList .icon {
+.globalMain .siteList .addButton .icon {
   width: 80px;
   height: 80px;
-  margin: 20px 20px;
+}
+.globalMain .siteList .addButton .link {
+  font-size: 14px;
+  margin-top: 0px;
 }
